@@ -86,7 +86,12 @@
 
     <script>
         function downloadOntology() {
-            window.location.href = "dqa.rdf";
+            const link = document.createElement("a");
+            link.href = "dqa.rdf";
+            link.download = "dqa.rdf"; // Forcer le téléchargement
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         function redirectToOntology() {
