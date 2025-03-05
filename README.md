@@ -68,7 +68,7 @@ We consider a simple baseline example. The use case involves five devices instal
 
 The first step involves receiving an observation and enriching it using the **SOSA** ontology. This phase does not require describing the processing of the observation in terms of representational indicators, as these mainly concern the proper representation of data rather than its qualitative assessment. Once enrichment is completed, the observation is stored in the GC repository to be used in the evaluation phases.
 
-<pre> ```ttl
+```ttl
 ex:obs_001 a sosa:Observation ;
     rdfs:comment "Observation of energy consumption from airconditioner#32" ;
     sosa:hasFeatureOfInterest ex:room016 ;
@@ -85,7 +85,8 @@ ex:obs_018 a sosa:Observation ;
     sosa:madeBySensor <http://www.w3.org/ns/sosa/examples#PZEM-004T#08> ;
     sosa:observedProperty ex:energyConsumption ;
     sosa:resultTime "2025-01-31T09:45:00"^^xsd:dateTime ;
-    sosa:usedProcedure ex:RoomPowerConsumption . ``` </pre>
+    sosa:usedProcedure ex:RoomPowerConsumption . 
+```
 
 
 #### Step 2: Evaluating DQ Indicators at the UO Level
@@ -94,7 +95,7 @@ At this step, DQ indicators that can be assessed on a single observation (**UO**
 
 ##### Formula-Based Method (Accuracy) :
 
-<pre> ```ttl
+```ttl
 ex:AccuracyAssessmentobs_018 a dqa:QualityAssessmentProcess ;
     dqa:assessesIndicator ex:Accuracy ;
     dqa:hasGranularity dqa:GranularityUniqueObservation ;
@@ -128,13 +129,13 @@ ex:Accuracy_obs_018Result a dqv:QualityMeasurement ;
     sosa:observedProperty ex:energyConsumption ;
     sosa:resultTime "2025-01-31T09:45:00"^^xsd:dateTime ;
     sosa:usedProcedure ex:RoomPowerConsumption .      
-``` </pre>
+``` 
 
 
 
 ##### Source-Based Method (Provenance) :
 
-<pre> ```ttl
+```ttl
 ex:ProvenanceAssessmentobs_018 a dqa:QualityAssessmentProcess ;
     dqa:assessesIndicator ex:Provenance ;
     dqa:hasGranularity dqa:GranularityUniqueObservation ;
@@ -146,7 +147,8 @@ ex:ProvenanceMethod a dqa:SourceBasedMethod ;
 
 ex:Provenance a dqv:Dimension ;
     skos:definition "Provenance refers to the source of the data values and its description." ;
-    skos:prefLabel "Provenance"@en . ``` </pre>
+    skos:prefLabel "Provenance"@en .
+```
 
 
 #### Step 3: Evaluating DQ Indicators at the SO-SD and SO-MD Levels
@@ -185,9 +187,8 @@ ex:Duplication a dqv:Dimension ;
 ex:Duplication_set_obs_1_Result a dqv:QualityMeasurement ;
     sdmx-attribute:unitMeasure <http://www.w3.org/vocabularies/om-1.8/Percentage> ;
     dqv:isMeasurementOf ex:MetricDuplication ;
-    dqv:value "0.0"^^xsd:float . ```
-
-
+    dqv:value "0.0"^^xsd:float .
+``` 
 
 ## Download
 
