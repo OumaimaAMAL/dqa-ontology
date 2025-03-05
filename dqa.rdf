@@ -43,7 +43,15 @@
         <rdfs:comment xml:lang="en">Establishes a relationship between a quality assessment process and the specific indicator it evaluates.</rdfs:comment>
         <rdfs:label xml:lang="en">assessesIndicator</rdfs:label>
     </owl:ObjectProperty>
-    
+
+
+     <!-- http://www.example.org/dqa#findsSource -->
+
+     <owl:ObjectProperty rdf:about="http://www.example.org/dqa#findsSource">
+        <rdfs:domain rdf:resource="http://www.example.org/dqa#QualityAssessmentProcess"/>
+        <rdfs:comment xml:lang="en">The property links a method for retrieving data sources to the identified source in the knowledge graph.</rdfs:comment>
+        <rdfs:label xml:lang="en">findsSource</rdfs:label>
+    </owl:ObjectProperty>
 
 
     <!-- http://www.example.org/dqa#hasGranularity -->
@@ -190,11 +198,11 @@
     
 
 
-    <!-- http://www.example.org/dqa#PathBasedMethod -->
+    <!-- http://www.example.org/dqa#SourceBasedMethod -->
 
     <owl:Class rdf:about="http://www.example.org/dqa#PathBasedMethod">
         <rdfs:subClassOf rdf:resource="http://www.example.org/dqa#AssessmentMethod"/>
-        <rdfs:comment xml:lang="en">A method that assesses data quality based on considering the path through which the data was generated and transmitted (e.g. provenance ..)</rdfs:comment>
+        <rdfs:comment xml:lang="en">A method that assesses data quality based on considering the source through which the data was generated and transmitted (e.g. provenance ..)</rdfs:comment>
         <rdfs:label xml:lang="en">PathBasedMethod</rdfs:label>
     </owl:Class>
     
