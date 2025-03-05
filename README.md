@@ -19,7 +19,9 @@ The **Data Quality Assessment Ontology (DQA)** is a suggested extension of the [
 
 Below is a diagram that represents the DQ Assessment Ontology (DQA):
 
-![DQA Overview](dqa-ontology.png)
+<p align="center">
+  <img src="dqa-ontology.png" alt="DQA Overview">
+</p>
 
 ### Ontology Classes
 
@@ -56,13 +58,16 @@ The ontology defines the following data properties:
 
 We consider a simple baseline example. The use case involves five devices installed in a classroom within a campus building. These devices include five sensors: two presence sensors and three integrated into three platforms—an air conditioner, a projector, and a ventilation system—all of which track their energy consumption (in watts) as observations. The use case is described using SOSA.
 
-![Use case Overview](useCase.png)
+<p align="center">
+  <img src="useCase.png" alt="Use case Overview">
+</p>
 
 ### Steps of DQA based approach and examples
 
 #### Step 1: Enriching the Observation
 
 The first step involves receiving an observation and enriching it using the **SOSA** ontology. This phase does not require describing the processing of the observation in terms of representational indicators, as these mainly concern the proper representation of data rather than its qualitative assessment. Once enrichment is completed, the observation is stored in the GC repository to be used in the evaluation phases.
+
 
 ex:obs_001 a sosa:Observation ;
     rdfs:comment "Observation of energy consumption from airconditioner#32" ;
