@@ -200,10 +200,10 @@
 
     <!-- http://www.example.org/dqa#SourceBasedMethod -->
 
-    <owl:Class rdf:about="http://www.example.org/dqa#PathBasedMethod">
+    <owl:Class rdf:about="http://www.example.org/dqa#SourceBasedMethod">
         <rdfs:subClassOf rdf:resource="http://www.example.org/dqa#AssessmentMethod"/>
         <rdfs:comment xml:lang="en">A method that assesses data quality based on considering the source through which the data was generated and transmitted (e.g. provenance ..)</rdfs:comment>
-        <rdfs:label xml:lang="en">PathBasedMethod</rdfs:label>
+        <rdfs:label xml:lang="en">SourceBasedMethod</rdfs:label>
     </owl:Class>
     
 
