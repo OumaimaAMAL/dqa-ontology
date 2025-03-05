@@ -73,7 +73,7 @@ ex:obs_001 a sosa:Observation ;
     rdfs:comment "Observation of energy consumption from airconditioner#32" ;
     sosa:hasFeatureOfInterest ex:room016 ;
     sosa:hasSimpleResult "1900.0"^^xsd:float .
-    sosa:madeBySensor "http://www.w3.org/ns/sosa/examples#PZEM-004T#53" ;
+    sosa:madeBySensor <http://www.w3.org/ns/sosa/examples#PZEM-004T#53> ;
     sosa:observedProperty ex:energyConsumption ;
     sosa:resultTime "2025-01-31T08:00:00"^^xsd:dateTime ;
     sosa:usedProcedure ex:RoomPowerConsumption . 
@@ -82,7 +82,7 @@ ex:obs_018 a sosa:Observation ;
     rdfs:comment "Observation of energy consumption from videoprojector#12" ;
     sosa:hasFeatureOfInterest ex:room016 ;
     sosa:hasSimpleResult "510.0"^^xsd:float ;
-    sosa:madeBySensor "http://www.w3.org/ns/sosa/examples#PZEM-004T#08" ;
+    sosa:madeBySensor <http://www.w3.org/ns/sosa/examples#PZEM-004T#08> ;
     sosa:observedProperty ex:energyConsumption ;
     sosa:resultTime "2025-01-31T09:45:00"^^xsd:dateTime ;
     sosa:usedProcedure ex:RoomPowerConsumption . ``` </pre>
@@ -124,7 +124,7 @@ ex:Accuracy_obs_018Result a dqv:QualityMeasurement ;
     sosa:hasResult [ a dqv:QualityMeasurement ;
             dqv:value 9.8e+01 ] ;
     sosa:hasSimpleResult "510.0"^^xsd:float ;
-    sosa:madeBySensor "http://www.w3.org/ns/sosa/examples#PZEM-004T#08" ;
+    sosa:madeBySensor <http://www.w3.org/ns/sosa/examples#PZEM-004T#08> ;
     sosa:observedProperty ex:energyConsumption ;
     sosa:resultTime "2025-01-31T09:45:00"^^xsd:dateTime ;
     sosa:usedProcedure ex:RoomPowerConsumption .      
@@ -138,7 +138,7 @@ ex:Accuracy_obs_018Result a dqv:QualityMeasurement ;
 ex:ProvenanceAssessmentobs_018 a dqa:QualityAssessmentProcess ;
     dqa:assessesIndicator ex:Provenance ;
     dqa:hasGranularity dqa:GranularityUniqueObservation ;
-    dqa:findsSource "http://www.w3.org/ns/sosa/examples#PZEM-004T#08" ;
+    dqa:findsSource <http://www.w3.org/ns/sosa/examples#PZEM-004T#08> ;
     dqa:usesMethod ex:ProvenanceMethod .
 
 ex:ProvenanceMethod a dqa:SourceBasedMethod ;
@@ -183,7 +183,7 @@ ex:Duplication a dqv:Dimension ;
     skos:prefLabel "Duplication"@en .
 
 ex:Duplication_set_obs_1_Result a dqv:QualityMeasurement ;
-    sdmx-attribute:unitMeasure <http://www.w3.org/vocabularies/om-1.8/Percentage> ;
+    sdmx-attribute:unitMeasure ```<http://www.w3.org/vocabularies/om-1.8/Percentage>``` ;
     dqv:isMeasurementOf ex:MetricDuplication ;
     dqv:value "0.0"^^xsd:float . ``` </pre>
 
