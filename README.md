@@ -160,7 +160,7 @@ To structure this step, the **OBOE** ontology is used to define the sets of obse
 
 ##### Formula-Based Method (Duplication) :
 
-<pre> ```ttl
+```ttl
 ex:ObservationCollection_1 a obeo:Observation;
     obeo:hasMeasurement ex:obs_001, ex:obs_002, ex:obs_003, ex:obs_004, ex:obs_005 .
 
@@ -183,9 +183,9 @@ ex:Duplication a dqv:Dimension ;
     skos:prefLabel "Duplication"@en .
 
 ex:Duplication_set_obs_1_Result a dqv:QualityMeasurement ;
-    sdmx-attribute:unitMeasure ```<http://www.w3.org/vocabularies/om-1.8/Percentage>``` ;
+    sdmx-attribute:unitMeasure <http://www.w3.org/vocabularies/om-1.8/Percentage> ;
     dqv:isMeasurementOf ex:MetricDuplication ;
-    dqv:value "0.0"^^xsd:float . ``` </pre>
+    dqv:value "0.0"^^xsd:float . ```
 
 
 
