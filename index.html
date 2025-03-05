@@ -5,99 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ontologie DQA</title>
     <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333;
-            --btn-bg: #007bff;
-            --btn-hover: #0056b3;
-        }
-
-        body.dark-mode {
-            --bg-color: #1e1e1e;
-            --text-color: #f1f1f1;
-            --btn-bg: #17a2b8;
-            --btn-hover: #117a8b;
-        }
-
         body {
             font-family: Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
             text-align: center;
-            padding: 20px;
-            transition: background 0.3s, color 0.3s;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 50px;
         }
-
         h1 {
-            font-size: 2em;
+            color: #007bff;
         }
-
-        p {
-            font-size: 1.2em;
-        }
-
-        .button {
+        a {
             display: inline-block;
             margin: 10px;
             padding: 10px 20px;
             font-size: 1em;
             color: white;
-            background-color: var(--btn-bg);
-            border: none;
+            background-color: #007bff;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
         }
-
-        .button:hover {
-            background-color: var(--btn-hover);
+        a:hover {
+            background-color: #0056b3;
         }
-
-        #toggle-mode {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.5em;
-        }
-
         .copy-message {
-            display: none;
             color: green;
             font-size: 0.9em;
+            display: none;
             margin-top: 10px;
         }
     </style>
 </head>
 <body>
-
-    <button id="toggle-mode">🌙</button>
-
     <h1>Ontologie DQA</h1>
     <p>Bienvenue sur la page de l'ontologie <strong>DQA</strong>, dédiée à l'évaluation de la qualité des données.</p>
-
-    <button class="button" onclick="downloadOntology()">📥 Télécharger l'ontologie</button>
-    <button class="button" onclick="redirectToOntology()">🔗 Accéder à l'ontologie</button>
-    <button class="button" onclick="copyToClipboard()">📋 Copier le lien</button>
-
+    <p><a href="dqa.rdf" download>📥 Télécharger l'ontologie</a></p>
+    <p><a href="dqa.rdf">🔗 Accéder à l'ontologie</a></p>
+    <p><a href="#" onclick="copyToClipboard()">📋 Copier le lien</a></p>
     <p class="copy-message" id="copy-message">✅ Lien copié dans le presse-papiers !</p>
 
     <script>
-        function downloadOntology() {
-            const link = document.createElement("a");
-            link.href = "dqa.rdf";
-            link.download = "dqa.rdf"; // Forcer le téléchargement
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        function redirectToOntology() {
-            window.open("dqa.rdf", "_blank");
-        }
-
         function copyToClipboard() {
             const url = window.location.href + "dqa.rdf";
             navigator.clipboard.writeText(url).then(() => {
@@ -107,12 +54,6 @@
                 }, 2000);
             });
         }
-
-        document.getElementById("toggle-mode").addEventListener("click", function() {
-            document.body.classList.toggle("dark-mode");
-            this.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-        });
     </script>
-
 </body>
 </html>
