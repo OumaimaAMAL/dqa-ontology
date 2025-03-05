@@ -161,7 +161,7 @@ To structure this step, the **OBOE** ontology is used to define the sets of obse
 ##### Formula-Based Method (Duplication) :
 
 <pre> ```ttl
-ex:ObservationCollection_1 a obeo:ObservationCollection ;
+ex:ObservationCollection_1 a obeo:Observation;
     obeo:hasMeasurement ex:obs_001, ex:obs_002, ex:obs_003, ex:obs_004, ex:obs_005 .
 
 ex:DuplicationAssessement_set_obs_1 a dqa:QualityAssessementProcess ;
