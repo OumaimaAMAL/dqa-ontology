@@ -59,7 +59,7 @@ The ontology defines the following data properties:
 We consider a simple baseline example. The use case involves five devices installed in a classroom within a campus building. These devices include five sensors: two presence sensors and three integrated into three platforms—an air conditioner, a projector, and a ventilation system—all of which track their energy consumption (in watts) as observations. The use case is described using SOSA.
 
 <p align="center">
-  <img src="useCase.png" alt="Use case Overview">
+  <img src="usecase.png" alt="Use case Overview">
 </p>
 
 ### Steps of DQA based approach and examples
@@ -76,6 +76,15 @@ ex:obs_001 a sosa:Observation ;
     sosa:madeBySensor <http://www.w3.org/ns/sosa/examples#PZEM-004T#53> ;
     sosa:observedProperty ex:energyConsumption ;
     sosa:resultTime "2025-01-31T08:00:00"^^xsd:dateTime ;
+    sosa:usedProcedure ex:RoomPowerConsumption . 
+
+ex:obs_018 a sosa:Observation ;
+    rdfs:comment "Observation of energy consumption from videoprojector#12" ;
+    sosa:hasFeatureOfInterest ex:room016 ;
+    sosa:hasSimpleResult "510.0"^^xsd:float ;
+    sosa:madeBySensor <http://www.w3.org/ns/sosa/examples#PZEM-004T#08> ;
+    sosa:observedProperty ex:energyConsumption ;
+    sosa:resultTime "2025-01-31T09:45:00"^^xsd:dateTime ;
     sosa:usedProcedure ex:RoomPowerConsumption . ``` </pre>
 
 
@@ -107,7 +116,20 @@ ex:Accuracy a dqv:Dimension ;
 ex:Accuracy_obs_018Result a dqv:QualityMeasurement ;
     sdmx-attribute:unitMeasure <http://www.w3.org/vocabularies/om-1.8/Percentage> ;
     dqv:isMeasurementOf ex:MetricAccuracyMethod ;
-    dqv:value 9.8e+01 . ``` </pre>
+    dqv:value 9.8e+01 . 
+
+ ex:obs_018 a sosa:Observation ;
+    rdfs:comment "Observation of energy consumption from videoprojector#12" ;
+    sosa:hasFeatureOfInterest ex:room016 ;
+    sosa:hasResult [ a dqv:QualityMeasurement ;
+            dqv:value 9.8e+01 ] ;
+    sosa:hasSimpleResult "510.0"^^xsd:float ;
+    sosa:madeBySensor <http://www.w3.org/ns/sosa/examples#PZEM-004T#08> ;
+    sosa:observedProperty ex:energyConsumption ;
+    sosa:resultTime "2025-01-31T09:45:00"^^xsd:dateTime ;
+    sosa:usedProcedure ex:RoomPowerConsumption .      
+``` </pre>
+
 
 
 ##### Source-Based Method (Provenance) :
@@ -140,7 +162,7 @@ To structure this step, the **OBOE** ontology is used to define the sets of obse
 
 <pre> ```ttl
 ex:ObservationCollection_1 a obeo:ObservationCollection ;
-    obeo:hasMember ex:obs_001, ex:obs_002, ex:obs_003, ex:obs_004, ex:obs_005 .
+    obeo:hasMeasurement ex:obs_001, ex:obs_002, ex:obs_003, ex:obs_004, ex:obs_005 .
 
 ex:DuplicationAssessement_set_obs_1 a dqa:QualityAssessementProcess ;
     dqa:assessesIndicator ex:Duplication ;
