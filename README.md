@@ -73,7 +73,7 @@ ex:obs_001 a sosa:Observation ;
     rdfs:comment "Observation of energy consumption from airconditioner#32" ;
     sosa:hasFeatureOfInterest ex:room016 ;
     sosa:hasSimpleResult "1900.0"^^xsd:float .
-    sosa:madeBySensor <http://www.w3.org/ns/sosa/examples#PZEM-004T#53> ;
+    sosa:madeBySensor "<http://www.w3.org/ns/sosa/examples#PZEM-004T#53>" ;
     sosa:observedProperty ex:energyConsumption ;
     sosa:resultTime "2025-01-31T08:00:00"^^xsd:dateTime ;
     sosa:usedProcedure ex:RoomPowerConsumption . 
@@ -82,7 +82,7 @@ ex:obs_018 a sosa:Observation ;
     rdfs:comment "Observation of energy consumption from videoprojector#12" ;
     sosa:hasFeatureOfInterest ex:room016 ;
     sosa:hasSimpleResult "510.0"^^xsd:float ;
-    sosa:madeBySensor <http://www.w3.org/ns/sosa/examples#PZEM-004T#08> ;
+    sosa:madeBySensor "<http://www.w3.org/ns/sosa/examples#PZEM-004T#08>" ;
     sosa:observedProperty ex:energyConsumption ;
     sosa:resultTime "2025-01-31T09:45:00"^^xsd:dateTime ;
     sosa:usedProcedure ex:RoomPowerConsumption . ``` </pre>
@@ -138,7 +138,7 @@ ex:Accuracy_obs_018Result a dqv:QualityMeasurement ;
 ex:ProvenanceAssessmentobs_018 a dqa:QualityAssessmentProcess ;
     dqa:assessesIndicator ex:Provenance ;
     dqa:hasGranularity dqa:GranularityUniqueObservation ;
-    dqa:findsSource <http://www.w3.org/ns/sosa/examples#PZEM-004T#08> ;
+    dqa:findsSource "<http://www.w3.org/ns/sosa/examples#PZEM-004T#08>" ;
     dqa:usesMethod ex:ProvenanceMethod .
 
 ex:ProvenanceMethod a dqa:SourceBasedMethod ;
