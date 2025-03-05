@@ -81,7 +81,7 @@ ex:obs_001 a sosa:Observation ;
 
 #### Step 2: Evaluating DQ Indicators at the UO Level
 
-At this step, DQ indicators that can be assessed on a single observation (**UO**) are applied. These include **accuracy**, **provenance**, **relevance**, and **freshness**. Each indicator is evaluated individually, and the resulting data is stored in the repository with a complete description of the evaluation process using the **SOSA**, **DQV**, and **DQA** ontologies. The **DQV** ontology is used to describe the evaluation of DQ dimensions (indicators), while **DQA** extends this descriptive model by integrating metadata associated with the evaluation process.
+At this step, DQ indicators that can be assessed on a single observation (**UO**) are applied. These include **accuracy**, **provenance**, **relevance**, and **timeliness**. Each indicator is evaluated individually, and the resulting data is stored in the repository with a complete description of the evaluation process using the **SOSA**, **DQV**, and **DQA** ontologies. The **DQV** ontology is used to describe the evaluation of DQ dimensions (indicators), while **DQA** extends this descriptive model by integrating metadata associated with the evaluation process.
 
 ##### Formula-Based Method (Accuracy) :
 
