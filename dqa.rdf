@@ -16,7 +16,7 @@
         <owl:imports rdf:resource="http://www.w3.org/ns/dqv#"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-04</terms:created>
         <terms:creator>https://www.linkedin.com/in/oumaima-amal/</terms:creator>
-        <terms:description>DQA : an extension of the DQV ontology designed to enhance the assessment of data quality by introducing structured evaluation processes, traceability of applied methods, and granularities and also results of indicators application. It extends DQV by incorporating assessment processes, granular evaluation levels, formula-based and path-based assessment methods, and qualitative labels for evaluation results.</terms:description>
+        <terms:description>DQA : an extension of the DQV ontology designed to enhance the assessment of data quality by introducing structured evaluation processes, traceability of applied methods, and granularities and also results of indicators application. It extends DQV by incorporating assessment processes, granular evaluation levels, formula-based and source-based assessment methods, and qualitative labels for evaluation results.</terms:description>
         <terms:title>DQA : Data Quality Assessment Ontology</terms:title>
         <vann:preferredNamespacePrefix>dqa</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://www.semanticweb.org/dqa</vann:preferredNamespaceUri>
@@ -92,7 +92,7 @@
     <owl:ObjectProperty rdf:about="http://www.example.org/dqa#usesMethod">
         <rdfs:domain rdf:resource="http://www.example.org/dqa#QualityAssessmentProcess"/>
         <rdfs:range rdf:resource="http://www.example.org/dqa#AssessmentMethod"/>
-        <rdfs:comment xml:lang="en">Links a quality assessment process to the specific method used for evaluation, either formula-based or path-based methods.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a quality assessment process to the specific method used for evaluation, either formula-based or source-based methods.</rdfs:comment>
         <rdfs:label xml:lang="en">usesMethod</rdfs:label>
     </owl:ObjectProperty>
     
@@ -162,7 +162,7 @@
     <!-- http://www.example.org/dqa#AssessmentMethod -->
 
     <owl:Class rdf:about="http://www.example.org/dqa#AssessmentMethod">
-        <rdfs:comment xml:lang="en">Defines the specific method applied to assess data quality, it is eaither a formula-based or path-based evaluation approach.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines the specific method applied to assess data quality, it is eaither a formula-based or source-based evaluation approach.</rdfs:comment>
         <rdfs:label xml:lang="en">AssessmentMethod</rdfs:label>
     </owl:Class>
     
