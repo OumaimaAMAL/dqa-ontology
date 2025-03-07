@@ -201,6 +201,8 @@ To use the DQA ontology in your project, **Download or Clone the Repository**: Y
 ## Contributors
 
 - Oumaima Amal - [LinkedIn](https://www.linkedin.com/in/oumaima-amal/)
+- Nathalie Hernandez - [Page Web][https://www.irit.fr/~Nathalie.Hernandez/]
+- Thierry Monteil - [LinkedIn][https://www.linkedin.com/in/thierry-monteil/]
 
 ## Contact
 
